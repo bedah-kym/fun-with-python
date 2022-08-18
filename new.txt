@@ -1,0 +1,15 @@
+	<label for="fname">Firstname</label>
+            <input type="fname" id="fname" class="form-control">
+          </div>
+          <div class="form-group shadow pr-50">
+            <label for="lname">Lastname</label>
+            <input type="lname" id="lname" class="form-control">
+          </div>
+          <div class="form-group shadow pr-50">
+            <label for="uname">username</label>
+            <input type="uname" id="email" class="form-control">
+          </div>
+
+          <div class="form-group shadow pr-50">
+            <label for="pwd">password</label>
+            <input type="password" id="pwd" class="form-control">
