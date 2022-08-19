@@ -1,48 +1,27 @@
-class Monster:
-    def __init__(self,name,origin,life,bullets):
-        self.name = name
-        self.origin = origin
-        self.life = life
-        self.bullets=bullets
-        
-    def shoot(self,other):
-        if other.life > 0:
-            if self.bullets > 0:
-                other.life-=1
-                self.bullets-=1
+
+marks=[5,25,43,88,81,72]
+
+def gradestudents(marks):
+    finalgrade=[]
+    if 0<= marks[0] <=60:
+        for x in range(1,(marks[0]+1)):
+            if marks[x] < 38:
+                finalgrade.append(marks[x])
             else:
-                return print('you have no bullets')
-        else:
-            return print('victim is dead')
-    
-    def add_life(self):
-        self.life+=1
-        return self.life
-    
+                multiple=marks[x]
+                while multiple %5 != 0:
+                    multiple+=1
+                #print('multiple =',multiple,'-',marks[x])
+                if multiple - marks[x] <3:
+                    finalgrade.append(multiple)
+                elif multiple - marks[x] ==3:
+                    finalgrade.append(marks[x])
+                else:
+                    finalgrade.append(marks[x])
+        #print(finalgrade)
+        return finalgrade
+                    
 
 
-class Alien(Monster):
-    def __init__(self,name,origin,life,bullets,weapon):
-        super().__init__(name,origin,life,bullets)
-        self.weapon=weapon
-        
-    def details(self):
-        return(f'{self.name} you have: {self.life} lives {self.bullets} bullets , your gun is {self.weapon}')
+print(gradestudents(marks))
 
-    
-
-class Preditor(Monster):
-    def __init__(self,name,origin,life,bullets,amour):
-        super().__init__(name,origin,life,bullets)
-        self.amour=amour
-
-    def details(self):
-        return(f'{self.name} you have: {self.life} lives {self.bullets} bullets , your amour is {self.amour}')
-        
-       
-
-A1=Alien('bert','mars',3,5,'ak47')
-M1=Preditor('ugly','jupiter',3,5,'steel plate')
-A1.shoot(M1)
-print(M1.details())
-print(A1.details())
