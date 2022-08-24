@@ -13,6 +13,9 @@ class Monster:
         self.bullets = 5
         self.wins = 0
         self.level=1
+
+    def __str__(self):
+        return self.name
         
     def shoot(self,other):
         if other.life > 0:
@@ -79,7 +82,6 @@ M1=Preditor('ugly','jupiter','steel plate')
 M2=Preditor('mose','jupi','steel')
 M3=Preditor('ujing','jupit','steel-plate')
 
-
 print('-------------- match 1 ----------')
 
 
@@ -112,5 +114,24 @@ while M3.life>0 and M3.bullets>0:
     else:
         print('shooter is dead')
         break
+"""
+this here 'lol' leaderboard function takes players as an arg and uses binary search to sort the .wins of the players
+but another loop prints the sorted list with the .names and .wins to make a lit leaderboard"""
 
+players=[A1,M1,M2,M3]
 
+def leaderboard(players):
+
+    for a in range(0,len(players)):
+        for x in range (0,len(players)-1):
+            if players[x].wins < players [x+1].wins:
+                players[x],players[x+1]=players[x+1],players[x]
+
+            else:
+                pass
+    for player in players:
+        print(player.name,player.wins)
+    
+print('----leader board-----')
+print(leaderboard(players))
+print('----leader board-----')            
