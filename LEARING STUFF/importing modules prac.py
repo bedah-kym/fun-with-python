@@ -11,6 +11,7 @@ e3=node(50)
 e2.nextval=e3
 linkedlist.insert_head(30)
 linkedlist.insert_tail(54)
+linkedlist.delete_at_index(1)
 linkedlist.print_val()
 
 

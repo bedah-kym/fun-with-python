@@ -115,7 +115,7 @@ while M3.life>0 and M3.bullets>0:
         print('shooter is dead')
         break
 """
-this here 'lol' leaderboard function takes players as an arg and uses binary search to sort the .wins of the players
+this here 'lol' leaderboard function takes players as an arg and uses bubblesort to sort the .wins of the players
 but another loop prints the sorted list with the .names and .wins to make a lit leaderboard"""
 
 players=[A1,M1,M2,M3]

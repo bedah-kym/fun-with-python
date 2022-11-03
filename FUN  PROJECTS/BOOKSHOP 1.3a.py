@@ -5,6 +5,7 @@ AND  ADD PASSWORD AND USER ACCOUNTS.
 FYI I DONT UNDERSTAND ALGORITHIMS YET
 
 """
+# i later discovered django so this is BS..
 
 from time import sleep
 import os
