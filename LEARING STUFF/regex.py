@@ -1,9 +1,11 @@
 import re
 
-num = input('enter phone no:')
+num = '078677515'
 
-#x = re.search(" ^('+254'|'0')\d{9}$ ", num) shorter way but has bug,i keep forgetting regex
+pattern = r'^("+254"|"0"),[0-9]{9}$'
 
+x = re.search(pattern , num)
+"""
 x=""
 #just a longer way to do it
 try:
@@ -26,8 +28,9 @@ except (IndexError):
     num = 'invalid'
     x=None
 
-
+"""
 if  x == None:
-    print('false')
+    print('false',x)
 else:
-    print('True')
+    print('True',x)
+1
